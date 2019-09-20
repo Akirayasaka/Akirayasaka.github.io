@@ -604,7 +604,7 @@
 				alert("欄位請勿空白");
 				location.reload();
 			}else{
-				$.post("api.php?do=contact",{fname,lname,email,subject,message},function(res){
+				$.post("http://220.128.133.15/s1080110/api.php?do=contact",{fname,lname,email,subject,message},function(res){
 					alert(res);
 					fname=$("#fname").val("");
 					lname=$("#lname").val("");
