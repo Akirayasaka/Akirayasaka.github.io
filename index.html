@@ -538,42 +538,7 @@
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
-	<script>
-
-		
-		$("#alink").on("click",function(e){
-			let target= document.getElementById('sendBtn');
-			if(window.scrollTo){
-				e.preventDefault();
-				window.scrollTo({'behavior':'smooth','top': target.offsetTop});
-			}
-		})
-
-		$("#sendBtn").on("click",function(e){
-			e.preventDefault();
-			let fname=$("#fname").val();
-			let lname=$("#lname").val();
-			let email=$("#email").val();
-			let subject=$("#subject").val();
-			let message=$("#message").val();
-
-			// console.log(fname,lname,email,subject,message);
-			if(fname=="" || lname=="" || email=="" || subject=="" || message==""){
-				alert("欄位請勿空白");
-				location.reload();
-			}else{
-				$.post("http://220.128.133.15/s1080110/api.php?do=contact",{fname,lname,email,subject,message},function(res){
-					alert(res);
-					fname=$("#fname").val("");
-					lname=$("#lname").val("");
-					email=$("#email").val("");
-					subject=$("#subject").val("");
-					message=$("#message").val("");
-				})
-			}
-		})
-
-	</script>
+	
 
 	</body>
 
