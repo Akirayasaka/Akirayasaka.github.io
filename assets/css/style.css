@@ -639,7 +639,9 @@ section {
   margin-bottom: 0;
 }
 
-.services .icon-box:hover .title a, .services .icon-box:hover .description {
+.services .icon-box:hover .title a,
+.services .icon-box:hover .description,
+.services .icon-box:hover table {
   color: #fff;
 }
 
